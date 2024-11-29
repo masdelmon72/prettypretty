@@ -15,7 +15,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           apt-get --purge remove -y dvc
-          pip install "git+https://github.com/iterative/dvc#egg=dvc[s3]"
+          pip install "dvc[s3]"
           dvc --version
           git fetch --prune --unshallow
           
