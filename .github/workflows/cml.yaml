@@ -4,7 +4,12 @@ on: [push]
 
 jobs:
   run:
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+    
     container: docker://dvcorg/cml-py3:latest
 
     steps:
